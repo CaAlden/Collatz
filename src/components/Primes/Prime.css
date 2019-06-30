@@ -48,6 +48,10 @@
   margin: 1em;
 }
 
+.red {
+  color: red;
+}
+
 /* classes for the entire prime component */
 .prime {
   display: flex;
