@@ -10,15 +10,23 @@ interface IProps {
   value: number
 }
 
-const PrimeCircle: FunctionComponent<IProps> = ({
-  value
-}) => (
-  <div className="prime-circle-container">
-    <div className="prime-circle">
-      <div className="prime-circle-value">{value}</div>
+interface IValueMetaProps {
+  prime: boolean;
+}
+
+const PrimeCircle: FunctionComponent<IProps & IValueMetaProps> = ({
+  value,
+  prime,
+}) => {
+  const color = prime ? 'red' : 'black';
+  return (
+    <div className="prime-circle-container">
+      <div className="prime-circle">
+        <div className={`prime-circle-value`} style={{color}}>{value}</div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Expt: FunctionComponent<{
   base: number;
@@ -39,7 +47,7 @@ const Binary: FunctionComponent<IProps> = ({
   const binaryDigits = getBinaryDigits(value);
   return (
     <span className="binary">{binaryDigits.map((d, idx) =>
-      <span className={d === 1 ? 'binary-red' : 'binary-black'} key={idx}>{d}</span>
+      <span className={d === 1 ? 'red' : ''} key={idx}>{d}</span>
     )}</span>
   );
 };
@@ -48,9 +56,10 @@ const Prime: FunctionComponent<IProps> = ({
   value,
 }) => {
   const factorization = getPrimeFactors(value);
+  const prime = factorization.length === 1 && factorization[0][1] === 1;
   return (
     <div className="prime">
-      <PrimeCircle value={value}/>
+      <PrimeCircle value={value} prime={prime} />
       <div className="factors">{factorization.map(([base, power], idx) =>
         <Expt key={idx} base={base} power={power}/>
       )}</div>

@@ -48,14 +48,6 @@
   margin: 1em;
 }
 
-.binary-red {
-  color: red;
-}
-
-.binary-black {
-  color: black;
-}
-
 /* classes for the entire prime component */
 .prime {
   display: flex;
