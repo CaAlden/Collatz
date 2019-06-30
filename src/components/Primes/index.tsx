@@ -20,7 +20,7 @@ const Primes: FunctionComponent<IProps> = ({
 
   useEffect(() => {
     setPrimes([start]);
-  }, [start]);
+  }, [start, iterate]);
 
   useEffect(() => {
     if (iterate) {

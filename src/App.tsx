@@ -40,7 +40,7 @@ const Settings = ({
     <div>
       <input type="text" ref={inputRef}/>
       <button type="button" onClick={handleClick}>Set Start Value</button>
-      <label>Iterate: </label>
+      <label> Iterate: </label>
       <input type="checkbox" onChange={handleCheckbox} checked={iterate}/>
     </div>
   );
