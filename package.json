@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "typecheck": "tsc --noEmit",
-    "start": "parcel start index.html"
+    "start": "parcel start index.html",
+    "build": "parcel build index.html --out-dir docs"
   },
   "author": "",
   "license": "ISC",
