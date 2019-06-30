@@ -1,0 +1,76 @@
+/* Class definitions for prime component*/
+/* Prime Circle defintions */
+.prime-circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 4em;
+  height: 4em;
+}
+.prime-circle {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.prime-circle-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 3px solid black;
+  border-radius: 100%;
+}
+
+/* Exponent classes */
+.expt {
+  padding: 0.5em 0.5em 0 0;
+  position: relative;
+}
+
+.expt-base {
+}
+
+.expt-power {
+  position: absolute;
+  top: 0.5em;
+  font-size: 0.6em;
+}
+
+/* Binary number classes */
+.binary {
+  margin: 1em;
+}
+
+.binary-red {
+  color: red;
+}
+
+.binary-black {
+  color: black;
+}
+
+/* classes for the entire prime component */
+.prime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  border-radius: 5px;
+  border: 1px solid #404040;
+  margin: 0.5em;
+  min-width: 200px;
+  min-height: 280px;
+}
+
+.factors {
+  display: inline-flex;
+  margin: 0.5em;
+} 

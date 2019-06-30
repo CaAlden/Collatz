@@ -1,0 +1,6 @@
+#root {
+  font-size: 20px;
+}
+div, span, h1, h2, h3, p {
+  box-sizing: border-box;
+}
